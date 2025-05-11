@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "web" {
-  ami           = "ami-0c1ac8a41498c1a9c"
+  ami           = "ami-0e35ddab05955cf57"
   instance_type = "t3.micro"
 key_name = "ubuntu-rsa"
   tags = {
