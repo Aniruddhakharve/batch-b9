@@ -16,7 +16,7 @@ provider "aws" {
 
 data "aws_security_group" "mysg" {
   filter {
-    name = "Security_group_name"
+    name = "group_name"
     values = [ mysg ]
 
   }
