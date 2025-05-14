@@ -12,6 +12,8 @@ provider "aws" {
   region  = "ap-south-1"
 }
 
+
+
 module "myvpcmodule" {
   source = "./vpc module"
   vpc_cidr = var.vpc_cidr
