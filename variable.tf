@@ -19,5 +19,5 @@ variable "pub_cidr" {
   
 }
 variable "pvt_subnet" {
-    default = "10.0.2.0/16"
+    default = "10.0.3.0/24"
 }

@@ -15,11 +15,7 @@ provider "aws" {
 
 
 data "aws_security_group" "mysg" {
-  filter {
-    name = "group_name"
-    values = [ "mysg" ]
-
-  }
+  id = "sg-0623015be8f4125b4"
 }
 
 
