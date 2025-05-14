@@ -21,4 +21,11 @@ module "myvpcmodule" {
   pvt_subnet = var.pvt_subnet
 }
 
+module "myinstancemodule" {
+  source = "./instance module"
+  instance_type = var.instance_type
+  project_name = var.project_name
+  
+}
+
 
