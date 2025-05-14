@@ -23,7 +23,21 @@ resource "aws_instance" "web" {
   ami           = "ami-0e35ddab05955cf57"
   instance_type = var.instance_type
 key_name = "mumbai-01"
-vpc_security_group_ids = [data.aws_security_group.mysg.id] 
+vpc_security_group_ids = [data.aws_security_group.mysg.id]
+
+connection {
+    type        = "ssh"
+    user        = "ubuntu"  # For Ubuntu AMIs
+    private_key = file("C:/Users/Aniruddha/Downloads/mumbai-01.pem")
+    host        = self.public_ip
+  }
+
+provisioner "file" {
+    source      = "C:/Users/Aniruddha/Downloads/terraform.pdf"
+    destination = "/home/ubuntu/terraform.pdf"
+  }
+
+
   tags = {
     Name =  var.project_name
 
