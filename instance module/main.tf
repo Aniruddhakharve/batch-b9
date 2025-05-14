@@ -1,4 +1,6 @@
-
+data "aws_security_group" "mysg" {
+  name = "mysg"
+}
 
 
 resource "aws_instance" "web" {
