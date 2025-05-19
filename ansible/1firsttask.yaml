@@ -1,5 +1,5 @@
  - name : myfirstplaybook
-   host: all
+   hosts: all
    tasks:
     - name: 1st  tasks 
       debug:
