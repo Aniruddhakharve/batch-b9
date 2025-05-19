@@ -3,7 +3,7 @@
    vars:
      movie: "spiderman"
    vars_files:
-     - C:\Aws practice\batch-b9\ansible\var.txt
+     - ./var.txt
    tasks:
     - name: 1st  tasks 
       debug:
