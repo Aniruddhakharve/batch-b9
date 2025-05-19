@@ -1,10 +1,12 @@
  - name : myfirstplaybook
    hosts: all
+   vars:
+     movie: "spiderman"
    tasks:
     - name: 1st  tasks 
       debug:
-         msg: "hello this is my first task"
+         msg: "hello this is {{movie}}"
     - name: 2nd  tasks 
       debug:
-         msg: "hello this is ansible"
+         msg: "hello this is {{movie}}-2"
 
