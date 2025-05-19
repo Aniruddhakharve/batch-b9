@@ -6,11 +6,13 @@
     - name: 1st  tasks 
       debug:
          msg: "hello this is {{movie}}"
+
     - name: 2nd  tasks 
       debug:
          msg: "hello this is {{movie}}-2"
+
     - name: 3rd  tasks 
       debug:
          msg: "hello this is {{movie}}"
-         vars:
+      vars:
           movie: "Ironman"
