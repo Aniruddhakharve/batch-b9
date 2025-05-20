@@ -28,4 +28,4 @@
 
     - name: print hostname
       debug:
-        msg: "this is  {{URL}}"      
+        msg: "this is  {{URL.stdout}}"      
