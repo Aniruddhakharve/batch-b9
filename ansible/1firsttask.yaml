@@ -21,3 +21,10 @@
          msg: "hello this is {{movie}}"
       vars:
           movie: "Ironman"
+
+    - name: get hostname
+      shell: hostname
+      register: URL
+    - name: print hostname
+      debug:
+      msg: "this is hostname {{URL}}"      
