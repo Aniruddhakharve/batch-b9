@@ -27,4 +27,4 @@
       register: URL
     - name: print hostname
       debug:
-      msg: "this is hostname {{URL}}"      
+      msg: "this is  {{URL}}"      
