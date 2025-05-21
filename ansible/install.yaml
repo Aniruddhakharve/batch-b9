@@ -1,6 +1,7 @@
 #yum and apt module
 #conditions
 #previliges root level permission
+#package module - it is used when you dont know if thr machine is denian or redhat so you dont know is it apt: or yum:
 
 - name: installation file
   hosts: all 
@@ -29,5 +30,12 @@
       update_cache: yes 
      when: ansible_os_family == "Debian" 
 
-   
+
+   - name: install nginx
+     package: #it used bcuz if you dont know which package to use yum or apt
+      name: nginx
+      state: latest 
+      update_cache: yes 
+     when: ansible_os_family == "RedHat"  
+  
 
