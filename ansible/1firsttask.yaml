@@ -1,12 +1,12 @@
  - name : myfirstplaybook
    hosts: all
-   vars:
-     movie: "spiderman"
-  #  vars_files:
-  #    - ./var.txt 
-   vars_prompt:
-     - name: movie
-       prompt: enter the movie name  
+  #  vars:
+  #    movie: "spiderman"
+  # #  vars_files:
+  # #    - ./var.txt 
+  #  vars_prompt:
+  #    - name: movie
+  #      prompt: enter the movie name  
    tasks:
     - name: 1st  tasks 
       debug:
@@ -33,4 +33,9 @@
     - name: Gathering facts
       debug:
          msg: "hello this is {{ansible_os_family}}"
+
+
+    - name: variable declared in host file 
+      debug:
+         msg: "hello this is {{movie}}"     
          
