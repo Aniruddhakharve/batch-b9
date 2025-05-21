@@ -1,2 +1,37 @@
+#yum and apt module
+#conditions
+#previliges root level permission
+
 - name: installation file
   hosts: all 
+  become: true #for root level previliges
+  tasks:
+   - name : install apache2
+     apt: #its a apt module
+      name: apache2
+      state: latest
+      update_cache: yes
+      when: ansible_os_family == "Debian"
+
+
+   - name : install httpd
+     yum: #its a yum module
+      name: httpd
+      state: latest
+      update_cache: yes 
+      when: ansible_os_family == "RedHat"
+
+
+   - name: install nginix
+     apt:
+      name: nginix
+      state: latest
+      update_cache: yes 
+      when: ansible_os_family == ""Debian"" 
+
+   - name: Install the latest version of Apache
+     ansible.builtin.yum:
+      name: httpd
+      state: latest
+      when: ansible_os_family == ""Debian"" 
+
