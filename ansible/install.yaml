@@ -11,7 +11,7 @@
       name: apache2
       state: latest
       update_cache: yes
-      when: ansible_os_family == "Debian"
+     when: ansible_os_family == "Debian"
 
 
    - name : install httpd
@@ -19,19 +19,19 @@
       name: httpd
       state: latest
       update_cache: yes 
-      when: ansible_os_family == "RedHat"
+     when: ansible_os_family == "RedHat"
 
 
-   - name: install nginix
+   - name: install nginx
      apt:
-      name: nginix
+      name: nginx
       state: latest
       update_cache: yes 
-      when: ansible_os_family == ""Debian"" 
+     when: ansible_os_family == "Debian" 
 
    - name: Install the latest version of Apache
      ansible.builtin.yum:
       name: httpd
       state: latest
-      when: ansible_os_family == ""Debian"" 
+     when: ansible_os_family == ""Debian"" 
 
