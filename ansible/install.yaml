@@ -22,16 +22,12 @@
      when: ansible_os_family == "RedHat"
 
 
-  #  - name: install nginx
-  #    apt:
-  #     name: nginx
-  #     state: latest
-  #     update_cache: yes 
-  #    when: ansible_os_family == "Debian" 
-
-   - name: Install the latest version of Apache
-     ansible.builtin.yum:
-      name: httpd
-      state: latest
+   - name: install nginx
+     apt:
+      name: nginx
+      state: latest 
+      update_cache: yes 
      when: ansible_os_family == "Debian" 
+
+   
 
