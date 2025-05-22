@@ -57,6 +57,7 @@
         name: nginx
         state: started
         enabled: yes
+     ignore_errors: yes  
      when:  ansible_os_family == "Debian"  
   
 
