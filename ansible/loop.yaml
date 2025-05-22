@@ -1,0 +1,26 @@
+- name: loops module
+  hosts: all
+  become: true
+  tasks: 
+   - name : loop check
+     debug: 
+       msg: "{{item}}"
+     loop: 
+       - apple
+       - bananna
+       - watermelon
+
+   - name : loop check 2
+     package: 
+       name: "{{item}}"
+       state: latest
+     loop: 
+       - vim
+       - wget
+       - nginx  
+       
+
+
+
+
+        
