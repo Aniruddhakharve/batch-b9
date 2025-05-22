@@ -58,6 +58,15 @@
         state: started
         enabled: yes
      ignore_errors: yes  
-     when:  ansible_os_family == "Debian"  
+     when:  ansible_os_family == "Debian"
+
+
+   - name: print list 
+     debug:
+      msg: "{{item}}"
+     loop:
+       - apple 
+       - mango
+       - bananna       
   
 
