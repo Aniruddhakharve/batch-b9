@@ -1,0 +1,23 @@
+- name: installation file
+  hosts: all 
+  become: true #for root level previliges
+  tasks:
+   - name : install apache2
+     apt: #its a apt module
+      name: apache2
+      state: latest
+      update_cache: yes
+     when: ansible_os_family == "Debian"
+
+   - name: Start apache2
+     service:
+        name: apache2
+        state: started
+        enabled: yes
+     ignore_errors: yes  
+     when:  ansible_os_family == "Debian"  
+
+   - name: deployment
+     copy:
+     src: ./index.html
+     dest: /var/www/html/index.html  
