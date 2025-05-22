@@ -42,8 +42,8 @@
    - name: Test Nginx configuration
      command: nginx -t
      register: nginx_test
-     gnore_errors: yes
-     
+     ignore_errors: yes
+
 
    - name: Fail if Nginx config test fails
      fail:
