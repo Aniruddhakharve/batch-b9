@@ -1,4 +1,4 @@
-- name: installation file
+- name: my copy module used for hosting site on apache2
   hosts: all 
   become: true #for root level previliges
   tasks:
@@ -19,5 +19,5 @@
 
    - name: deployment
      copy:
-     src: ./index.html
-     dest: /var/www/html/index.html  
+       src: ./index.html
+       dest: /var/www/html/index.html  
