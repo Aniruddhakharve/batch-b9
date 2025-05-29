@@ -15,7 +15,7 @@
   package:
     name: "{{pkg}}"
     state: latest
-    enabled: yes
+    
 
 - name: copy index.html
   copy: 
