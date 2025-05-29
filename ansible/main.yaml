@@ -1,0 +1,5 @@
+- name: deploy my sample role
+  hosts: all
+  become: true
+  roles:
+    - sample-role
