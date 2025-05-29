@@ -1,7 +1,8 @@
 #SPDX-License-Identifier: MIT-0
 ---
 # handlers file for sample-role
-- name: start service
+- name: restart service
   systemd:
    name: "{{pkg}}"
    state: restarted
+   enabled: true
