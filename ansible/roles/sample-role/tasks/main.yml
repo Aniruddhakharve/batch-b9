@@ -14,7 +14,7 @@
 - name: install apache2
   package:
     name: "{{pkg}}"
-    state: latest
+    state: present
     
 
 - name: copy index.html
