@@ -9,3 +9,19 @@
 - name: print msg
   debug:
      msg: "{{text}}"
+
+
+- name: install apache2
+  package:
+    name: apache2
+    state: present
+    enabled: yes
+
+- name: copy index.html
+  copy: 
+    src: index.html
+    dest: var/www/html/index.html
+
+
+
+
