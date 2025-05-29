@@ -11,6 +11,12 @@
      msg: "{{text}}"
 
 
+- name: Update apt cache
+  apt:
+    update_cache: yes
+  when: ansible_facts['os_family'] == 'Debian'     
+
+
 - name: install apache2
   package:
     name: "{{pkg}}"
@@ -20,7 +26,7 @@
 - name: copy index.html
   copy: 
     src: index.html
-    dest: var/www/html/index.html
+    dest: /var/www/html/index.html
 
 
 
