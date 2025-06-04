@@ -1,0 +1,20 @@
+version: "3" 
+
+services:
+
+  webserver:
+    image: aniruddhakharve/batch-b9:v2
+    ports:
+     - 80:80
+    environment:
+      - jalebi=samosa
+
+  backend:
+    image: aniruddhakharve/batch-b9:v1
+    ports:
+     - 8080:80  
+    environment:
+      - pav=bhaji
+
+      
+   
